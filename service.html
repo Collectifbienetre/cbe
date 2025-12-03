@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Charitize - Charity Organization Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center h-100">
+            <div class="col-12 text-center">
+                <a href="index.html">
+                    <h1 class="display-5 text-primary m-0">Collectif bien-être étudiant</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <h4 class="d-lg-none m-0">Menu</h4>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link">Accueil</a>
+                        <a href="donation.html" class="nav-item nav-link">Je veux donner</a>
+                        <a href="service.html" class="nav-item nav-link active">J'ai besoin d'aide</a>
+                        <a href="feature.html" class="nav-item nav-link">Soutien psychologique</a>
+                        <!--  <a href="about.html" class="nav-item nav-link">À propos</a>
+                        <a href="team.html" class="nav-item nav-link">Infos pratiques</a> -->
+                    </div>
+                    <div class="d-none d-lg-flex ms-auto">
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-4">
+            <h1 class="display-3 animated slideInDown">Trouver un don</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">J'ai besoin d'aide</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Info Banner Start -->
+    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-12 py-5 text-center">
+                    <h3 class="mb-3">Trouvez l'aide dont vous avez besoin</h3>
+                    <p class="mb-0 fs-5">Parcourez les dons disponibles et contactez directement les donateurs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Info Banner End -->
+
+
+    <!-- Filters Section Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h3 class="mb-4"><i class="fa fa-filter text-primary me-2"></i>Filtrer les dons</h3>
+                        <form class="row g-3">
+                            <div class="col-md-4">
+                                <select class="form-select" id="filterType">
+                                    <option value="">Tous les types</option>
+                                    <option value="alimentaire">Alimentaire</option>
+                                    <option value="vetements">Vêtements</option>
+                                    <option value="meubles">Meubles</option>
+                                    <option value="fournitures">Fournitures</option>
+                                    <option value="autres">Autres</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="filterCity" placeholder="Ville">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary w-100">
+                                    <i class="fa fa-search me-2"></i>Rechercher
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Filters Section End -->
+
+    <!-- Donations List Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h2 class="display-6 mb-3">Dons disponibles</h2>
+                <p>Parcourez les dons proposés par la communauté étudiante</p>
+            </div>
+            <div class="row g-4">
+                <!-- Don Items -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/donation-1.jpg" class="card-img-top" alt="Don alimentaire">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Alimentaire</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">Urgent</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pâtes et conserves</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Paris 13ème
+                            </p>
+                            <p class="card-text">Lot de pâtes, riz et conserves. Bon état, dates longues.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 2h
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/donation-2.jpg" class="card-img-top" alt="Vêtements">
+                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Vêtements</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Manteau d'hiver taille M</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Lyon 7ème
+                            </p>
+                            <p class="card-text">Manteau noir en bon état, chaud pour l'hiver. Taille M.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 5h
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/donation-3.jpg" class="card-img-top" alt="Fournitures">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-2">Fournitures</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Livres de cours L2 Droit</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Bordeaux Centre
+                            </p>
+                            <p class="card-text">5 manuels L2 Droit en bon état. Surlignés mais lisibles.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 1j
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/event-1.jpg" class="card-img-top" alt="Meubles">
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Meubles</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bureau + chaise</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Toulouse St-Michel
+                            </p>
+                            <p class="card-text">Bureau en bois + chaise de bureau. Bon état général.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 1j
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/event-2.jpg" class="card-img-top" alt="Électroménager">
+                            <span class="badge bg-secondary position-absolute top-0 end-0 m-2">Autres</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Micro-ondes fonctionnel</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Lille Wazemmes
+                            </p>
+                            <p class="card-text">Micro-ondes 20L en parfait état de marche.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 2j
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="card h-100 shadow-sm">
+                        <div class="position-relative">
+                            <img src="img/event-3.jpg" class="card-img-top" alt="Vaisselle">
+                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Cuisine</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Set vaisselle complet</h5>
+                            <p class="card-text text-muted mb-2">
+                                <i class="fa fa-map-marker-alt text-primary me-1"></i>Marseille 5ème
+                            </p>
+                            <p class="card-text">6 assiettes, verres, couverts. État neuf.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fa fa-clock me-1"></i>Il y a 3j
+                                </small>
+                                <button class="btn btn-sm btn-primary">Contacter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- CTA Section Start -->
+    <div class="container-fluid banner py-5">
+        <div class="container">
+            <div class="banner-inner bg-primary p-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 py-4 text-center">
+                        <h2 class="display-6 mb-3 wow fadeIn" data-wow-delay="0.3s">Vous souhaitez donner ?</h2>
+                        <p class="fs-5 mb-4 wow fadeIn" data-wow-delay="0.5s">Proposez vos dons et aidez d'autres
+                            étudiants. Chaque geste compte dans notre communauté solidaire.</p>
+                        <div class="d-flex justify-content-center wow fadeIn" data-wow-delay="0.7s">
+                            <a class="btn btn-secondary py-3 px-4 me-3" href="donation.html">Proposer un don</a>
+                            <a class="btn btn-light py-3 px-4" href="about.html">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CTA Section End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid bg-primary py-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 mb-4">Restez informé</h1>
+                    <div class="position-relative w-100 mb-2">
+                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Votre email"
+                            style="height: 60px;">
+                        <button type="button"
+                            class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <p class="mb-0">Recevez les actualités et nouveaux dons disponibles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>France</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>contact@collectif-bienetre.fr</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Liens rapides</h4>
+                    <a class="btn btn-link" href="index.html">Accueil</a>
+                    <!-- <a class="btn btn-link" href="about.html">À propos</a> -->
+                    <a class="btn btn-link" href="donation.html">Faire un don</a>
+                    <a class="btn btn-link" href="service.html">Trouver un don</a>
+                    <!-- <a class="btn btn-link" href="team.html">Infos pratiques</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Nos valeurs</h4>
+                    <p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Solidarité</p>
+                    <p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Bienveillance</p>
+                    <p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Respect</p>
+                    <p class="mb-2"><i class="fa fa-check text-primary me-2"></i>Gratuité</p>
+                    <p class="mb-0"><i class="fa fa-check text-primary me-2"></i>Confidentialité</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Notre mission</h4>
+                    <p>Faciliter l'accès aux ressources essentielles et au soutien psychologique pour tous les étudiants
+                        en créant une communauté solidaire et bienveillante.</p>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">Collectif bien-être étudiant</a>, Tous droits
+                        réservés.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>. Distributed by
+                        <a class="fw-semi-bold" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
